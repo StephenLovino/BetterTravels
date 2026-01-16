@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import Image from "next/image";
 import { Search, MapPin, Building2 } from "lucide-react";
@@ -24,8 +25,16 @@ const features = [
 ];
 
 export default function Memories() {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end start"]
+    });
+    // Start rotated left (-100deg), center upright (0deg), end rotated right (100deg)
+    const rotate = useTransform(scrollYProgress, [0, 1], [-100, 100]);
+
     return (
-        <section className="py-24 px-6 md:px-12 bg-white overflow-hidden">
+        <section ref={ref} className="py-24 px-6 md:px-12 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
                 {/* Left Content */}
@@ -72,13 +81,16 @@ export default function Memories() {
                     className="relative pt-12"
                 >
                     {/* Circular badge */}
-                    <div className="absolute top-0 left-0 bg-white rounded-full p-6 shadow-xl z-20 animate-spin-slow">
+                    <motion.div
+                        style={{ rotate }}
+                        className="absolute top-0 left-0 bg-white rounded-full p-6 shadow-xl z-20"
+                    >
                         <div className="w-24 h-24 rounded-full border border-dashed border-primary flex items-center justify-center p-2">
                             <span className="text-[10px] font-bold tracking-widest uppercase text-center text-secondary">
                                 Explore <br /> More <br /> World
                             </span>
                         </div>
-                    </div>
+                    </motion.div>
 
                     <div className="relative w-full aspect-square rounded-full overflow-hidden border-8 border-gray-50/50 shadow-2xl">
                         <Image

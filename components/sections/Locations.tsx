@@ -12,7 +12,7 @@ const locations = [
     { id: 2, name: "Paris, France", image: "/assets/images/paris.png" },
     { id: 3, name: "London, UK", image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=2670&auto=format&fit=crop" },
     { id: 4, name: "Tokyo, Japan", image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=2694&auto=format&fit=crop" },
-    { id: 5, name: "New York, USA", image: "https://images.unsplash.com/photo-1496442226666-8d4a0e62e6e9?q=80&w=2670&auto=format&fit=crop" },
+    { id: 5, name: "New York, USA", image: "https://images.unsplash.com/photo-1485871981535-5b17f5b3b276?q=80&w=2670&auto=format&fit=crop" },
 ];
 
 export default function Locations() {

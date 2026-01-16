@@ -25,7 +25,7 @@ const SocialIcon = ({ Icon }: { Icon: any }) => (
 
 export default function Footer() {
     return (
-        <footer className="bg-[#050011] text-white">
+        <footer className="bg-[#050011] text-white rounded-t-[3rem]">
             {/* Newsletter Section - Darker Banner */}
             <div className="bg-[#0B051D] py-20 px-6 md:px-12 rounded-t-[3rem]">
                 <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -117,7 +117,7 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-                    <p>© 2024 All Reserved by Frame-Devs</p>
+                    <p>© 2024 All Reserved by DevKonek</p>
                 </div>
             </div>
         </footer>
