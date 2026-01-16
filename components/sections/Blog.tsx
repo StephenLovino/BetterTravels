@@ -38,7 +38,7 @@ export default function Blog() {
                     <motion.div
                         initial="initial"
                         whileInView="animate"
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         variants={fadeInUp}
                     >
                         <span className="text-primary font-medium tracking-wide uppercase text-sm mb-2 block">
@@ -49,7 +49,7 @@ export default function Blog() {
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                     >
                         <Button variant="primary" className="px-8">Read All Blogs</Button>
                     </motion.div>
@@ -60,7 +60,7 @@ export default function Blog() {
                     variants={staggerContainer}
                     initial="initial"
                     whileInView="animate"
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                 >
                     {blogs.map((blog, i) => (
                         <motion.div

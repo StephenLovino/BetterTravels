@@ -37,7 +37,7 @@ export default function Locations() {
                     <motion.div
                         initial="initial"
                         whileInView="animate"
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         variants={fadeInUp}
                     >
                         <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">Choose Your Locations</h2>
@@ -50,7 +50,7 @@ export default function Locations() {
                         className="flex gap-4"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                     >
                         <button
                             onClick={scrollLeft}
@@ -72,7 +72,7 @@ export default function Locations() {
                     className="flex gap-8 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide"
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.8 }}
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >

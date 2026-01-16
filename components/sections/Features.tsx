@@ -24,7 +24,7 @@ export default function Features() {
                     variants={staggerContainer}
                     initial="initial"
                     whileInView="animate"
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                 >
                     <motion.div variants={fadeInUp}>
                         <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
@@ -63,7 +63,7 @@ export default function Features() {
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.8 }}
                     className="relative h-[600px] w-full rounded-[3rem] overflow-hidden order-1 lg:order-2"
                 >

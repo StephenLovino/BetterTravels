@@ -33,7 +33,7 @@ export default function Testimonials() {
                     className="text-center mb-16"
                     initial="initial"
                     whileInView="animate"
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     variants={fadeInUp}
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">What Says Our Visitors</h2>
@@ -47,7 +47,7 @@ export default function Testimonials() {
                     variants={staggerContainer}
                     initial="initial"
                     whileInView="animate"
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                 >
                     {testimonials.map((t, i) => (
                         <motion.div

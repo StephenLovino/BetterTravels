@@ -50,7 +50,7 @@ export default function Tours() {
                     className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
                     initial="initial"
                     whileInView="animate"
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: false, margin: "-100px" }}
                     variants={staggerContainer}
                 >
                     <motion.div variants={fadeInUp}>
@@ -70,7 +70,7 @@ export default function Tours() {
                     variants={staggerContainer}
                     initial="initial"
                     whileInView="animate"
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                 >
                     {tours.map((tour) => (
                         <motion.div

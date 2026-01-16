@@ -20,7 +20,7 @@ export default function Stats() {
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: false, margin: "-100px" }}
                     transition={{ duration: 0.8 }}
                     className="relative h-[600px] w-full rounded-[3rem] overflow-hidden"
                 >
@@ -37,7 +37,7 @@ export default function Stats() {
                     variants={staggerContainer}
                     initial="initial"
                     whileInView="animate"
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: false, margin: "-100px" }}
                     className="flex flex-col gap-8"
                 >
                     <motion.div variants={fadeInUp}>

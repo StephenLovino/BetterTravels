@@ -42,7 +42,7 @@ export default function Memories() {
                     variants={staggerContainer}
                     initial="initial"
                     whileInView="animate"
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                 >
                     <motion.span variants={fadeInUp} className="text-primary font-medium tracking-wide uppercase text-sm mb-2 block">
                         Why Choose Us
@@ -76,7 +76,7 @@ export default function Memories() {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.8 }}
                     className="relative pt-12"
                 >

@@ -35,7 +35,7 @@ export default function Services() {
                     <motion.div
                         initial="initial"
                         whileInView="animate"
-                        viewport={{ once: true, margin: "-100px" }}
+                        viewport={{ once: false, margin: "-100px" }}
                         variants={fadeInUp}
                         className="max-w-md"
                     >
@@ -56,7 +56,7 @@ export default function Services() {
                     variants={staggerContainer}
                     initial="initial"
                     whileInView="animate"
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: false, margin: "-100px" }}
                 >
                     {services.map((service, index) => (
                         <motion.div
