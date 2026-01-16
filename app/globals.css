@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F7F9F7;
+  /* Slightly greener tint off-white */
+  --foreground: #0F1C15;
+  --primary: #2E6F40;
+  /* Forest/Emerald Green */
+  --secondary: #0A2619;
+  /* Deep Dark Green */
+  --muted: #E2E8E2;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-jakarta);
+  --font-heading: var(--font-outfit);
+  --font-serif: var(--font-playfair);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 500;
+  /* Increase weight to fix 'thin' look */
+  letter-spacing: 0.01em;
+  /* Slight spacing boost */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
+  letter-spacing: -0.02em;
+  /* Tighter headings */
 }
